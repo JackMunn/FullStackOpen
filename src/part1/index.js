@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CourseInfo from "./courseinfo/courseinfo";
 import Unicafe from './unicafe/unicafe';
+import Anecdotes from './anecdotes/anecdotes'
 
 const Part1 = () => {
   const [exercise, setExercise] = useState(0);
@@ -12,6 +13,7 @@ const Part1 = () => {
       <button onClick={() => setExercise(2)}> CourseInfo </button>
       <button onClick={() => setExercise(3)}> Unicafe </button>
 
+      {exercise === 1 && <Anecdotes/>}
       {exercise === 2 && <CourseInfo />}
       {exercise === 3 && <Unicafe/>}
     </>
